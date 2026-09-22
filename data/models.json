@@ -639,7 +639,7 @@
     {
       "id": "livebench_agentic_coding",
       "inEci": false,
-      "models": 103,
+      "models": 104,
       "randomBaseline": null,
       "releaseDate": null,
       "scoreCeiling": null,
@@ -651,7 +651,7 @@
     {
       "id": "livebench_coding",
       "inEci": false,
-      "models": 123,
+      "models": 124,
       "randomBaseline": null,
       "releaseDate": null,
       "scoreCeiling": null,
@@ -1201,7 +1201,7 @@
       "unit": "pct"
     }
   ],
-  "generatedAt": "2026-09-22T06:10:01.004Z",
+  "generatedAt": "2026-09-22T17:45:02.184Z",
   "models": [
     {
       "benchmarks": {
@@ -1364,7 +1364,7 @@
         "toolCall": null
       },
       "coding": [],
-      "contextWindow": 131072,
+      "contextWindow": 1048576,
       "firstSeenAt": "2026-09-18T06:34:09.227Z",
       "id": "aion-labs/aion-2.0",
       "knowledgeCutoff": null,
@@ -1433,7 +1433,7 @@
         "toolCall": null
       },
       "coding": [],
-      "contextWindow": 131072,
+      "contextWindow": 1048576,
       "firstSeenAt": "2026-09-18T06:34:09.227Z",
       "id": "aion-labs/aion-3.0",
       "knowledgeCutoff": null,
@@ -1502,7 +1502,7 @@
         "toolCall": null
       },
       "coding": [],
-      "contextWindow": 131072,
+      "contextWindow": 1048576,
       "firstSeenAt": "2026-09-18T06:34:09.227Z",
       "id": "aion-labs/aion-3.0-mini",
       "knowledgeCutoff": null,
@@ -9617,7 +9617,7 @@
         "totalB": 27.78
       },
       "pricing": {
-        "cachedInputPerMTok": 0.03,
+        "cachedInputPerMTok": 0.15,
         "inputPerMTok": 0.6,
         "outputPerMTok": 3.6
       },
@@ -11508,7 +11508,7 @@
         "totalB": 27.78
       },
       "pricing": {
-        "cachedInputPerMTok": 0.085,
+        "cachedInputPerMTok": 0.05,
         "inputPerMTok": 0.4,
         "outputPerMTok": 2.55
       },
@@ -20790,6 +20790,117 @@
         }
       ],
       "slug": "anthropic-claude-opus-5",
+      "trainingComputeFlop": null,
+      "vendorId": "anthropic"
+    },
+    {
+      "benchmarks": {
+        "aime": null,
+        "arc_agi_2": null,
+        "eci": null,
+        "fiction_live": null,
+        "gpqa_diamond": null,
+        "swe_bench_pro": null,
+        "swe_bench_vendor": null,
+        "swe_bench_verified": null,
+        "webdev_arena_elo": null
+      },
+      "capabilities": {
+        "promptCaching": true,
+        "reasoning": true,
+        "structuredOutput": null,
+        "toolCall": true
+      },
+      "coding": [
+        {
+          "attribution": "third-party",
+          "league": "livebench_coding",
+          "score": 89.25,
+          "source": "livebench",
+          "sourceUrl": "https://livebench.ai/#/?release=2026-06-25",
+          "unit": "pct"
+        },
+        {
+          "attribution": "third-party",
+          "league": "livebench_agentic_coding",
+          "score": 71.72,
+          "source": "livebench",
+          "sourceUrl": "https://livebench.ai/#/?release=2026-06-25",
+          "unit": "pct"
+        }
+      ],
+      "contextWindow": 1000000,
+      "firstSeenAt": "2026-09-22T17:45:02.184Z",
+      "id": "anthropic/claude-opus-5-5",
+      "knowledgeCutoff": "2026-06",
+      "license": null,
+      "maxOutput": 128000,
+      "modalities": {
+        "input": [
+          "image",
+          "pdf",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 5.5",
+      "openWeights": false,
+      "params": {
+        "activeB": null,
+        "confidence": "estimated",
+        "sizeTier": 5,
+        "sizeTierBasis": "price+naming",
+        "totalB": null
+      },
+      "pricing": {
+        "cachedInputPerMTok": 0.2,
+        "inputPerMTok": 4,
+        "outputPerMTok": 20
+      },
+      "provenance": {
+        "capabilities.promptCaching": "derived",
+        "capabilities.reasoning": "models.dev",
+        "capabilities.toolCall": "models.dev",
+        "coding": "derived",
+        "contextWindow": "models.dev",
+        "knowledgeCutoff": "models.dev",
+        "maxOutput": "models.dev",
+        "modalities": "models.dev",
+        "name": "models.dev",
+        "openWeights": "models.dev",
+        "params.sizeTier": "derived",
+        "pricing.cachedInputPerMTok": "models.dev",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
+        "releaseDate": "models.dev",
+        "releaseDatePrecision": "models.dev",
+        "scores": "derived",
+        "vendorId": "derived"
+      },
+      "releaseDate": "2026-09-22",
+      "releaseDatePrecision": "day",
+      "retiredAt": null,
+      "scores": [
+        {
+          "attribution": "third-party",
+          "league": "livebench_agentic_coding",
+          "score": 71.72,
+          "source": "livebench",
+          "sourceUrl": "https://livebench.ai/#/?release=2026-06-25",
+          "unit": "pct"
+        },
+        {
+          "attribution": "third-party",
+          "league": "livebench_coding",
+          "score": 89.25,
+          "source": "livebench",
+          "sourceUrl": "https://livebench.ai/#/?release=2026-06-25",
+          "unit": "pct"
+        }
+      ],
+      "slug": "anthropic-claude-opus-5-5",
       "trainingComputeFlop": null,
       "vendorId": "anthropic"
     },
@@ -44301,11 +44412,12 @@
         "pricing.outputPerMTok": "litellm",
         "releaseDate": "openrouter",
         "releaseDatePrecision": "openrouter",
+        "retiredAt": "derived",
         "vendorId": "derived"
       },
       "releaseDate": "2026-03-27",
       "releaseDatePrecision": "day",
-      "retiredAt": null,
+      "retiredAt": "2026-09-22",
       "scores": [],
       "slug": "kwaipilot-kat-coder-pro-v2",
       "trainingComputeFlop": null,
@@ -46742,8 +46854,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": 0.04,
-        "inputPerMTok": 0.35,
-        "outputPerMTok": 1.5
+        "inputPerMTok": 0.3,
+        "outputPerMTok": 1.2
       },
       "provenance": {
         "benchmarks.swe_bench_pro": "models.dev",
@@ -51368,8 +51480,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.3447,
-        "outputPerMTok": 0.4596
+        "inputPerMTok": 0.34389,
+        "outputPerMTok": 0.45852
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -60662,7 +60774,7 @@
       },
       "pricing": {
         "cachedInputPerMTok": 0.01,
-        "inputPerMTok": 0.065,
+        "inputPerMTok": 0.07,
         "outputPerMTok": 0.2
       },
       "provenance": {
@@ -91572,43 +91684,43 @@
   ],
   "sources": {
     "derived": {
-      "fetchedAt": "2026-09-22T06:10:01.004Z",
+      "fetchedAt": "2026-09-22T17:45:02.184Z",
       "note": "管线内推导的字段（规模档位、缓存能力、退役判定）",
       "ok": true
     },
     "epoch.ai": {
-      "fetchedAt": "2026-09-22T06:10:01.004Z",
+      "fetchedAt": "2026-09-22T17:45:02.184Z",
       "note": "ZIP 87 个条目；取到 7/7 个指标；编程赛制 9 个；全榜单 76 个；训练算力 312 行；去重后 409 个模型实体；合规拦截 1 个文件",
       "ok": true
     },
     "huggingface": {
-      "fetchedAt": "2026-09-22T06:10:01.004Z",
+      "fetchedAt": "2026-09-22T17:45:02.184Z",
       "note": "请求 160 个开源模型，成功 156，失败 4",
       "ok": true
     },
     "litellm": {
-      "fetchedAt": "2026-09-22T06:10:01.004Z",
-      "note": "4499 条（对话类 3580 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
+      "fetchedAt": "2026-09-22T17:45:02.184Z",
+      "note": "4500 条（对话类 3581 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
       "ok": true
     },
     "livebench": {
-      "fetchedAt": "2026-09-22T06:10:01.004Z",
+      "fetchedAt": "2026-09-22T17:45:02.184Z",
       "note": "Apache-2.0 / DATASHEET 明文「no copyrights on the data」。采用 6 个同期 release（2026-06-25, 2026-01-08, 2025-12-23, 2025-11-25, 2025-05-30, 2025-04-25）；跳过题目集换代前的 5 个（2024-06-24, 2024-07-26, 2024-08-31, 2024-11-25, 2025-04-02）——实测跨这个断点同一模型的 Coding 分中位差 27.6 分，不可同池。",
       "ok": true
     },
     "lmarena": {
-      "fetchedAt": "2026-09-22T06:10:01.004Z",
+      "fetchedAt": "2026-09-22T17:45:02.184Z",
       "note": "7/7 个分榜，共 317 条 Arena 分",
       "ok": true
     },
     "models.dev": {
-      "fetchedAt": "2026-09-22T06:10:01.004Z",
-      "note": "models.json 422 条；api.json 223 provider / 7989 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
+      "fetchedAt": "2026-09-22T17:45:02.184Z",
+      "note": "models.json 423 条；api.json 223 provider / 8033 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
       "ok": true
     },
     "openrouter": {
-      "fetchedAt": "2026-09-22T06:10:01.004Z",
-      "note": "445 条；已剔除 artificial_analysis 183 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
+      "fetchedAt": "2026-09-22T17:45:02.184Z",
+      "note": "444 条；已剔除 artificial_analysis 182 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     },
     "override": {
@@ -91617,7 +91729,7 @@
       "ok": true
     },
     "vercel-gateway": {
-      "fetchedAt": "2026-09-22T06:10:01.004Z",
+      "fetchedAt": "2026-09-22T17:45:02.184Z",
       "note": "380 条（language 257 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     }
