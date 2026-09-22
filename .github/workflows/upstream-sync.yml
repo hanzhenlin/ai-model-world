@@ -1,0 +1,23 @@
+name: 定时同步上游代码
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # 每天北京时间 11:00 自动拉取一次上游
+  workflow_dispatch:   # 支持在 Actions 界面手动一键触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 同步上游
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add upstream https://github.com/liyupi/ai-model-world.git || true
+          git fetch upstream main
+          git merge upstream/main -m "chore: 自动同步鱼皮上游代码" || exit 0
+          git push origin main
