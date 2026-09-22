@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { DEFAULT_LANG, getDict, htmlLang } from '@/lib/i18n';
 import { SiteFooter } from '@/components/world/SiteFooter';
+import { AccessGuard } from '@/components/auth/AccessGuard';
 import { asset } from '@/lib/asset';
 
 const dict = getDict(DEFAULT_LANG);
@@ -37,8 +38,10 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <style dangerouslySetInnerHTML={{ __html: fontFace }} />
       </head>
       <body className="min-h-full">
-        {children}
-        <SiteFooter />
+        <AccessGuard>
+          {children}
+          <SiteFooter />
+        </AccessGuard>
       </body>
     </html>
   );
